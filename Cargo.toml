@@ -1,0 +1,23 @@
+[package]
+description = "Extensions for integrating Axum and Tonic with tracing, OpenTelemetry, and observability"
+edition     = "2021"
+license     = "MIT"
+name        = "tracing-opentelemetry-ext"
+version     = "0.1.0"
+
+
+[dependencies]
+axum                       = { version = "0.6.18", default-features = false }
+axum-tracing-opentelemetry = { version = "0.10.0", default-features = false, features = ["otlp"] }
+opentelemetry              = { version = "0.18.0", default-features = false, features = ["rt-tokio"] }
+opentelemetry-http         = { version = "0.7.0" }
+tokio                      = { version = "1.28.1", default-features = false, features = ["signal"] }
+tonic                      = { version = "0.9.2" }
+tower                      = { version = "0.4.13" }
+tracing                    = { version = "0.1.37" }
+tracing-opentelemetry      = { version = "0.18.0" }
+tracing-subscriber         = { version = "0.3.16", default-features = false, features = ["ansi", "env-filter", "fmt", "json"] }
+
+
+[dev-dependencies]
+thiserror = { version = "1.0.40" }
