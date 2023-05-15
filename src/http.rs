@@ -1,6 +1,7 @@
 use axum::body::Body;
 use axum::http::Request;
 use axum::response::Response;
+pub use axum_tracing_opentelemetry::{opentelemetry_tracing_layer, opentelemetry_tracing_layer_grpc};
 use opentelemetry::propagation::TextMapPropagator;
 use opentelemetry::sdk::propagation::TraceContextPropagator;
 use opentelemetry_http::{HeaderExtractor, HeaderInjector};
